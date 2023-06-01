@@ -1,2 +1,1 @@
-export * from './lib/mircoapps';
-export * from './themes/theme';
+export { theme } from './themes/theme';

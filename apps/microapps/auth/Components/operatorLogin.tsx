@@ -56,9 +56,7 @@ const OperatorLogin = () => {
         __fieldTestId="operator.password.input"
         error={formState.errors.password?.message}
       />
-      <Button variant={'primary' as Variant} onClick={handleSubmit(onSubmit)}>
-        Sign in
-      </Button>
+      <Button onClick={handleSubmit(onSubmit)}>Sign in</Button>
     </Flex>
   );
 };

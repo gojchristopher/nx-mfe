@@ -29,7 +29,8 @@
       "configurations": {
         "development": {
           "buildTarget": "microapps-host:build:development",
-          "dev": true
+          "dev": true,
+          "port": 4000
         },
         "production": {
           "buildTarget": "microapps-host:build:production",

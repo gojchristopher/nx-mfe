@@ -1,4 +1,4 @@
-const colors = {
+export const colors = {
   accent: {
     blue: {
       500: '#2457A3',
@@ -89,5 +89,3 @@ const colors = {
     },
   },
 };
-
-export default colors;

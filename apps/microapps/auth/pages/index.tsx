@@ -5,7 +5,7 @@ import { ButtonTabs } from '@highoutput/hds-tab';
 import OperatorLogin from '../Components/operatorLogin';
 import AdminLogin from '../Components/adminLogin';
 
-const Login = () => {
+export default function Login() {
   return (
     <Flex justify="center" width="full" height="100vh">
       <Flex
@@ -48,6 +48,4 @@ const Login = () => {
       </Flex>
     </Flex>
   );
-};
-
-export default Login;
+}

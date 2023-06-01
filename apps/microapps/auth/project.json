@@ -29,11 +29,13 @@
       "configurations": {
         "development": {
           "buildTarget": "microapps-auth:build:development",
-          "dev": true
+          "dev": true,
+          "port": 4001
         },
         "production": {
           "buildTarget": "microapps-auth:build:production",
-          "dev": false
+          "dev": false,
+          "port": 4200
         }
       }
     },

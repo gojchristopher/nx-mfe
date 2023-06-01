@@ -3,17 +3,16 @@ import Head from 'next/head';
 import { ThemeProvider } from '@highoutput/hds';
 import { theme } from '@nexius/microapps';
 
-function CustomApp({ Component, pageProps }: AppProps) {
+import '@module-federation/nextjs-mf/src/include-defaults';
+import { ChakraProvider } from '@chakra-ui/react';
+
+export default function CustomApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
+    <ChakraProvider theme={theme}>
       <Head>
-        <title>Welcome to auth!</title>
+        <title>Nexius Authentication</title>
       </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </ThemeProvider>
+      <Component {...pageProps} />
+    </ChakraProvider>
   );
 }
-
-export default CustomApp;
