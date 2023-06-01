@@ -11,7 +11,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  distDir: 'build',
   nx: {
     // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr
@@ -20,10 +19,10 @@ const nextConfig = {
   webpack(config, { isServer }) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'nexius-host',
+        name: 'nexius-auth',
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './login': './pages/index.tsx',
+          './Login': './pages/index.tsx',
         },
         extraOptions: {
           enableUrlLoaderFix: true,
