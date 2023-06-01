@@ -1,7 +1,7 @@
 {
-  "name": "host",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/host",
+  "name": "microapps-host",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/microapps/host",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,12 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/host",
-        "outputPath": "dist/apps/host"
+        "root": "apps/microapps/host",
+        "outputPath": "dist/apps/microapps/host"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/host"
+          "outputPath": "apps/microapps/host"
         },
         "production": {}
       }
@@ -23,16 +23,16 @@
       "executor": "@nrwl/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "host:build",
+        "buildTarget": "microapps-host:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "host:build:development",
+          "buildTarget": "microapps-host:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "host:build:production",
+          "buildTarget": "microapps-host:build:production",
           "dev": false
         }
       }
@@ -40,14 +40,14 @@
     "export": {
       "executor": "@nrwl/next:export",
       "options": {
-        "buildTarget": "host:build:production"
+        "buildTarget": "microapps-host:build:production"
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/host/jest.config.ts",
+        "jestConfig": "apps/microapps/host/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -61,7 +61,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/host/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/microapps/host/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

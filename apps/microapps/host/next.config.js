@@ -59,6 +59,10 @@ const nextConfig = {
             singleton: true,
             requiredVersion: false,
           },
+          '@nexius/microapps': {
+            singleton: true,
+            requiredVersion: false,
+          },
         },
       })
     );

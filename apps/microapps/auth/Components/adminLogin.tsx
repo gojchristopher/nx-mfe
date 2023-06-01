@@ -5,6 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { AdminLoginContext, AdminLoginSchema } from './validations';
 import { useToast } from '@highoutput/hds-toast';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Variant } from '@highoutput/hds-forms/types';
 
 const AdminLogin = () => {
   const toast = useToast();
@@ -47,7 +48,9 @@ const AdminLogin = () => {
         __fieldTestId="admin.password.input"
         error={formState.errors.password?.message}
       />
-      <Button onClick={handleSubmit(onSubmit)}>Sign in</Button>
+      <Button variant={'primary' as Variant} onClick={handleSubmit(onSubmit)}>
+        Sign in
+      </Button>
     </Flex>
   );
 };

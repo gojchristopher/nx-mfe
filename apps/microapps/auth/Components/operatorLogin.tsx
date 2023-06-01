@@ -5,6 +5,7 @@ import { useToast } from '@highoutput/hds-toast';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { OperatorLoginContext, OperatorLoginSchema } from './validations';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Variant } from '@highoutput/hds-forms/types';
 
 const OperatorLogin = () => {
   const toast = useToast();
@@ -55,7 +56,9 @@ const OperatorLogin = () => {
         __fieldTestId="operator.password.input"
         error={formState.errors.password?.message}
       />
-      <Button onClick={handleSubmit(onSubmit)}>Sign in</Button>
+      <Button variant={'primary' as Variant} onClick={handleSubmit(onSubmit)}>
+        Sign in
+      </Button>
     </Flex>
   );
 };
