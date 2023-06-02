@@ -2,9 +2,15 @@ import { colors } from './colors';
 import { Button } from './components/button';
 import { extendTheme } from '@chakra-ui/react';
 
-export const theme = extendTheme({
+// export const theme = extendTheme({
+//   colors,
+//   components: {
+//     Button,
+//   },
+// });
+export const theme = {
   colors,
   components: {
     Button,
   },
-});
+};

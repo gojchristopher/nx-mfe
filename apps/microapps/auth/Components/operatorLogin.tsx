@@ -1,11 +1,12 @@
 import { Flex } from '@highoutput/hds';
 import React from 'react';
-import { Button, PasswordField, TextField } from '@highoutput/hds-forms';
+import { PasswordField, TextField } from '@highoutput/hds-forms';
 import { useToast } from '@highoutput/hds-toast';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { OperatorLoginContext, OperatorLoginSchema } from './validations';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Variant } from '@highoutput/hds-forms/types';
+import { Button } from '@chakra-ui/react';
 
 const OperatorLogin = () => {
   const toast = useToast();
@@ -56,7 +57,9 @@ const OperatorLogin = () => {
         __fieldTestId="operator.password.input"
         error={formState.errors.password?.message}
       />
-      <Button onClick={handleSubmit(onSubmit)}>Sign in</Button>
+      <Button variant="primary" onClick={handleSubmit(onSubmit)}>
+        Sign in
+      </Button>
     </Flex>
   );
 };

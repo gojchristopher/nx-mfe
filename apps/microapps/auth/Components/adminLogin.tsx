@@ -1,13 +1,12 @@
 import { Flex } from '@highoutput/hds';
-import { Button, PasswordField, TextField } from '@highoutput/hds-forms';
+import { PasswordField, TextField } from '@highoutput/hds-forms';
 import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { AdminLoginContext, AdminLoginSchema } from './validations';
 import { useToast } from '@highoutput/hds-toast';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Variant } from '@highoutput/hds-forms/types';
-import InputField from './InputField';
-// import { Button } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 
 const AdminLogin = () => {
   const toast = useToast();
@@ -50,22 +49,9 @@ const AdminLogin = () => {
         __fieldTestId="admin.password.input"
         error={formState.errors.password?.message}
       />
-      {/* <InputField
-        {...register('username')}
-        label="Username"
-        // __fieldTestId="admin.username.input"
-        placeholder="Enter your username"
-        errorMsg={formState.errors.username?.message}
-      />
-      <InputField
-        {...register('password')}
-        label="Password"
-        type="password"
-        placeholder="••••••••"
-        // __fieldTestId="admin.password.input"
-        errorMsg={formState.errors.password?.message}
-      /> */}
-      <Button onClick={handleSubmit(onSubmit)}>Sign in</Button>
+      <Button variant={'primary' as Variant} onClick={handleSubmit(onSubmit)}>
+        Sign in
+      </Button>
     </Flex>
   );
 };

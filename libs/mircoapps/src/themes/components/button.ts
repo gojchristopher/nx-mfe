@@ -5,7 +5,7 @@ export const Button = {
   variants: {
     primary: {
       bg: 'brand.primary.500',
-      color: 'neutrals.100',
+      color: 'Neutrals.100',
       borderColor: 'brand.primary.500',
       border: '1px solid',
       boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
@@ -18,8 +18,8 @@ export const Button = {
       },
       _disabled: {
         bg: 'Neutrals.200',
-        color: 'neutrals.400',
-        borderColor: 'neutrals.200',
+        color: 'Neutrals.400',
+        borderColor: 'Neutrals.200',
         opacity: 1,
       },
     },

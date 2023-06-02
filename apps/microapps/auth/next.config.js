@@ -8,6 +8,10 @@ const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
 const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
   nx: {
     // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr
@@ -19,43 +23,42 @@ const nextConfig = {
       new NextFederationPlugin({
         name: 'authentication',
         filename: 'static/chunks/remoteEntry.js',
-
         exposes: {
           './Login': './pages/index.tsx',
         },
         shared: {
-          // '@highoutput/hds': {
-          //   singleton: true,
-          //   requiredVersion: false,
-          // },
-          // '@highoutput/hds-forms': {
-          //   singleton: true,
-          //   requiredVersion: false,
-          // },
-          // '@highoutput/hds-tab': {
-          //   singleton: true,
-          //   requiredVersion: false,
-          // },
-          // '@highoutput/hds-table': {
-          //   singleton: true,
-          //   requiredVersion: false,
-          // },
-          // '@highoutput/hds-toast': {
-          //   singleton: true,
-          //   requiredVersion: false,
-          // },
-          //   '@hookform/resolvers': {
-          //     singleton: true,
-          //     requiredVersion: false,
-          //   },
-          //   'react-hook-form': {
-          //     singleton: true,
-          //     requiredVersion: false,
-          //   },
-          //   yup: {
-          //     singleton: true,
-          //     requiredVersion: false,
-          //   },
+          '@highoutput/hds': {
+            singleton: true,
+            requiredVersion: false,
+          },
+          '@highoutput/hds-forms': {
+            singleton: true,
+            requiredVersion: false,
+          },
+          '@highoutput/hds-tab': {
+            singleton: true,
+            requiredVersion: false,
+          },
+          '@highoutput/hds-table': {
+            singleton: true,
+            requiredVersion: false,
+          },
+          '@highoutput/hds-toast': {
+            singleton: true,
+            requiredVersion: false,
+          },
+          '@hookform/resolvers': {
+            singleton: true,
+            requiredVersion: false,
+          },
+          'react-hook-form': {
+            singleton: true,
+            requiredVersion: false,
+          },
+          yup: {
+            singleton: true,
+            requiredVersion: false,
+          },
           '@chakra-ui/react': {
             singleton: true,
             requiredVersion: false,
