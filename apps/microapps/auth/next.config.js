@@ -8,6 +8,7 @@ const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
 const nextConfig = {
+  assetPrefix: '.',
   output: 'export',
   images: {
     unoptimized: true,
