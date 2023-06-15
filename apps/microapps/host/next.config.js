@@ -9,7 +9,15 @@ const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
  **/
 const nextConfig = {
   output: 'export',
-  // assetPrefix: '.',
+  assetPrefix: '.',
+  async rewrites() {
+    return [
+      {
+        source: '/home',
+        destination: 'dist/apps/microapps/host/.next/home.html',
+      },
+    ];
+  },
   nx: {
     // Set this to true if you would like to use SVGR
     // See: https://github.com/gregberge/svgr
