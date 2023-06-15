@@ -72,10 +72,10 @@ const nextConfig = {
             singleton: true,
             requiredVersion: false,
           },
-          '@chakra-ui/react': {
-            singleton: true,
-            requiredVersion: false,
-          },
+          // '@chakra-ui/react': {
+          //   singleton: true,
+          //   requiredVersion: false,
+          // },
           yup: {
             singleton: true,
             requiredVersion: false,

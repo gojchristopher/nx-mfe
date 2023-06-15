@@ -60,10 +60,10 @@ const nextConfig = {
             singleton: true,
             requiredVersion: false,
           },
-          '@chakra-ui/react': {
-            singleton: true,
-            requiredVersion: false,
-          },
+          // '@chakra-ui/react': {
+          //   singleton: true,
+          //   requiredVersion: false,
+          // },
           '@nexius/microapps': {
             singleton: true,
             requiredVersion: false,
