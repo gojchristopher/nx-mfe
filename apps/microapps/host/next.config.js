@@ -88,7 +88,6 @@ const nextConfig = {
         extraOptions: {
           enableUrlLoaderFix: true,
           automaticAsyncBoundary: true,
-          enableImageLoaderFix: true,
         },
       })
     );
@@ -99,7 +98,7 @@ const nextConfig = {
     esmExternals: false,
   },
   images: {
-    domains: ['localhost', 'nx-mfe-login-ohayo003.vercel.app'],
+    domains: ['localhost', 'https://nx-mfe-login-ohayo003.vercel.app'],
   },
 };
 
