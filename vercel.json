@@ -2,7 +2,7 @@
     "rewrites": [
         {"source": "/home", "destination": "/home.html"},
         {"source": "/members", "destination": "/member.html"},
-        {"source": "/member/member-settings", "destination":"member/member-settings.html"}
+        {"source": "/members/member-settings", "destination":"member/member-settings.html"}
 
     ]
 }
