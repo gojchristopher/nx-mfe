@@ -25,8 +25,9 @@ export function Host() {
 
   useEffect(() => setIsHydratedUserStore(useUserStore.persist.hasHydrated), []);
 
-  if (!user) {
+  if (!user && isHydratedUserStore) {
     router.push('/');
+    return null;
   }
 
   return (

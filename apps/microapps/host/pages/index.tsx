@@ -1,5 +1,4 @@
 import React from 'react';
-
 import dynamic from 'next/dynamic';
 import { Box } from '@highoutput/hds';
 import { useUserStore } from '@nexius/microapps';
@@ -20,8 +19,9 @@ const Login = () => {
     []
   );
 
-  if (user) {
+  if (isHydratedUserStore && user) {
     route.push('/home');
+    return null;
   }
 
   return (
