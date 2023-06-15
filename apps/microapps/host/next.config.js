@@ -9,7 +9,7 @@ const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
  **/
 const nextConfig = {
   output: 'export',
-  assetPrefix: '.',
+  // assetPrefix: '.',
   nx: {
     // Set this to true if you would like to use SVGR
     // See: https://github.com/gregberge/svgr
