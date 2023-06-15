@@ -1,9 +1,9 @@
 import { Box, Flex, Text } from '@highoutput/hds';
-import Header from '../../Components/Header/Header';
-import { Tabs } from '../../Components/Tabs/Tabs';
-import useTabStore from '../../store/useTabStore';
+import Header from '../Components/Header/Header';
+import { Tabs } from '../Components/Tabs/Tabs';
+import useTabStore from '../store/useTabStore';
 import React, { useEffect } from 'react';
-import useGetDevice from '../../hooks/useGetDevice';
+import useGetDevice from '../hooks/useGetDevice';
 
 export function Host() {
   const { tabs, selectedTab, cleanup } = useTabStore((state) => state);
