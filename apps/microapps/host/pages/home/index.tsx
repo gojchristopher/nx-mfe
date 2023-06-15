@@ -1,14 +1,19 @@
 import { Box, Flex, Text } from '@highoutput/hds';
-import Header from '../Components/Header/Header';
-import { Tabs } from '../Components/Tabs/Tabs';
-import useTabStore from '../store/useTabStore';
 import React, { useEffect } from 'react';
-import useGetDevice from '../hooks/useGetDevice';
+import { useRouter } from 'next/router';
+import { useUserStore } from '@nexius/microapps';
+import useGetDevice from '../../hooks/useGetDevice';
+import useTabStore from '../../store/useTabStore';
+import Header from '../../Components/Header/Header';
+import { Tabs } from '../../Components/Tabs';
 
 export function Host() {
   const { tabs, selectedTab, cleanup } = useTabStore((state) => state);
+  const { user } = useUserStore((state) => state);
   const { device } = useGetDevice();
+  const router = useRouter();
   const [isHydrated, setIsHydrated] = React.useState(false);
+  const [isHydratedUserStore, setIsHydratedUserStore] = React.useState(false);
 
   useEffect(() => {
     setIsHydrated(useTabStore.persist.hasHydrated);
@@ -17,6 +22,12 @@ export function Host() {
       cleanup();
     };
   }, [cleanup]);
+
+  useEffect(() => setIsHydratedUserStore(useUserStore.persist.hasHydrated), []);
+
+  if (!user) {
+    router.push('/');
+  }
 
   return (
     <Box w="full" h="100vh" maxW="2693px">

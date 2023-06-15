@@ -7,9 +7,11 @@ import { OperatorLoginContext, OperatorLoginSchema } from './validations';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Variant } from '@highoutput/hds-forms/types';
 import { Button } from '@chakra-ui/react';
+import { useUserStore } from '@nexius/microapps';
 
 const OperatorLogin = () => {
   const toast = useToast();
+  const { setUser } = useUserStore((state) => state);
   const { register, reset, handleSubmit, formState } =
     useForm<OperatorLoginContext>({
       mode: 'all',
@@ -23,6 +25,7 @@ const OperatorLogin = () => {
 
   const onSubmit: SubmitHandler<OperatorLoginContext> = async (input) => {
     if (input) {
+      setUser(input);
       toast.success('Successfully logged-in.');
       reset();
     }

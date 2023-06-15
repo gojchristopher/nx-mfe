@@ -7,9 +7,11 @@ import { useToast } from '@highoutput/hds-toast';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Variant } from '@highoutput/hds-forms/types';
 import { Button } from '@chakra-ui/react';
+import { useUserStore } from '@nexius/microapps';
 
 const AdminLogin = () => {
   const toast = useToast();
+  const { setUser } = useUserStore((state) => state);
   const { register, formState, handleSubmit, reset } =
     useForm<AdminLoginContext>({
       mode: 'all',
@@ -22,6 +24,10 @@ const AdminLogin = () => {
 
   const onSubmit: SubmitHandler<AdminLoginContext> = async (input) => {
     if (input) {
+      setUser({
+        ...input,
+        code: 'admin.123123',
+      });
       toast.success('Successfully logged-in');
       reset();
     }
