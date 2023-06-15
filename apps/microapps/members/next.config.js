@@ -9,7 +9,7 @@ const { withNx } = require('@nrwl/next/plugins/with-nx');
  **/
 const nextConfig = {
   output: 'export',
-  assetPrefix: '.',
+  // assetPrefix: '.',
   nx: {
     // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr

@@ -44,7 +44,9 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.7.0",
-    "@highoutput/hds": "^0.3.4",
+    "@floating-ui/react": "^0.24.3",
+    "@highoutput/hds": "^0.3.19",
+    "@highoutput/hds-avatar": "^0.3.13",
     "@highoutput/hds-forms": "^0.3.6",
     "@highoutput/hds-tab": "^0.2.15",
     "@highoutput/hds-table": "^0.3.9",
@@ -57,9 +59,11 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
+    "react-intersection-observer": "^9.4.4",
     "regenerator-runtime": "0.13.7",
     "tslib": "^2.3.0",
     "uuid": "^9.0.0",
-    "yup": "^1.1.1"
+    "yup": "^1.1.1",
+    "zustand": "^4.3.8"
   }
 }

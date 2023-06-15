@@ -57,6 +57,13 @@ const nextConfig = {
             singleton: true,
             requiredVersion: false,
           },
+          '@floating-ui/react': { singleton: true, requiredVersion: false },
+          '@highoutput/hds-avatar': { singleton: true, requiredVersion: false },
+          'react-intersection-observer': {
+            singleton: true,
+            requiredVersion: false,
+          },
+          zustand: { singleton: true, requiredVersion: false },
           '@hookform/resolvers': {
             singleton: true,
             requiredVersion: false,

@@ -23,6 +23,23 @@ export const Button = {
         opacity: 1,
       },
     },
+    menu: {
+      fontWeight: '400',
+      color: 'Neutrals.900',
+      background: 'transparent',
+      whiteSpace: 'nowrap',
+      fontSize: '18px',
+      lineHeight: '24px',
+      border: 'none',
+      borderRadius: '6px',
+      _hover: {
+        background: 'brand.primary.50',
+      },
+      transition: 'opacity 300ms ease-in-out',
+      padding: '9px 12px',
+      h: 'full',
+      shadow: 'none',
+    },
   },
   defaultProps: {
     variant: 'primary',
