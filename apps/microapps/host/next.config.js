@@ -17,6 +17,15 @@ const nextConfig = {
   },
   webpack(config, { isServer }) {
     const subpath = isServer ? 'ssr' : 'chunks';
+    const authLink =
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:4001'
+        : process.env.AUTH_LINK;
+
+    const memberLink =
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:4002'
+        : process.env.MEMBER_LINK;
 
     config.cache = true;
     config.plugins.push(
@@ -24,8 +33,8 @@ const nextConfig = {
         name: 'host',
         filename: 'static/chunks/remoteEntry.js',
         remotes: {
-          '@remotes/authentication': `authentication@http://localhost:4001/_next/static/${subpath}/remoteEntry.js`,
-          '@remotes/members': `members@http://localhost:4002/_next/static/${subpath}/remoteEntry.js`,
+          '@remotes/authentication': `authentication@${authLink}/_next/static/${subpath}/remoteEntry.js`,
+          '@remotes/members': `members@${memberLink}/_next/static/${subpath}/remoteEntry.js`,
         },
         shared: {
           '@highoutput/hds': {
