@@ -19,6 +19,9 @@
         "production": {}
       }
     },
+    "prod-serve":{
+      "command": "serve dist/apps/microapps/auth/.next"
+    },
     "serve": {
       "executor": "@nrwl/next:server",
       "defaultConfiguration": "development",
