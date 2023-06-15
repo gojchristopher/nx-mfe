@@ -92,7 +92,7 @@ const nextConfig = {
     esmExternals: false,
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'nx-mfe-login-ohayo003.vercel.app'],
   },
 };
 
